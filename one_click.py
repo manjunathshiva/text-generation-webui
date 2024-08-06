@@ -115,7 +115,7 @@ def update_pytorch():
     if is_cuda118:
         install_pytorch += "--index-url https://download.pytorch.org/whl/cu118"
     elif is_cuda:
-        install_pytorch += "--index-url https://download.pytorch.org/whl/cu121"
+        install_pytorch += "--index-url https://download.pytorch.org/whl/cu121 --trusted-host download.pytorch.org"
     elif is_rocm:
         install_pytorch += "--index-url https://download.pytorch.org/whl/rocm5.6"
     elif is_cpu:
@@ -292,7 +292,7 @@ def install_webui():
         if use_cuda118 == 'Y':
             install_pytorch += "--index-url https://download.pytorch.org/whl/cu118"
         else:
-            install_pytorch += "--index-url https://download.pytorch.org/whl/cu121"
+            install_pytorch += "--index-url https://download.pytorch.org/whl/cu121 --trusted-host download.pytorch.org"
     elif selected_gpu == "AMD":
         install_pytorch += "--index-url https://download.pytorch.org/whl/rocm5.6"
     elif selected_gpu in ["APPLE", "NONE"]:
