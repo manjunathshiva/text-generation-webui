@@ -1,3 +1,4 @@
+--trusted-host objects.githubusercontent.com
 accelerate==0.32.*
 aqlm[gpu,cpu]==1.1.6; platform_system == "Linux"
 auto-gptq==0.7.1
